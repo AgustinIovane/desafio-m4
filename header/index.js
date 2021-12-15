@@ -6,7 +6,7 @@ function headerContent(el) {
             <header class="header">
 
             <div>
-                <img class="header__logo" src="character.jpg">
+            <a href="./index.html"><img src="./img/character.jpg" alt="" class="footer__logo" /></a>
             </div>
 
 
@@ -29,8 +29,8 @@ function headerContent(el) {
 
                     <div class="ventana__menu-container">
                         <a href="./portfolio.html" class="header__ventana-menu">Portfolio</a>
-                        <a href="./services.html" class="header__ventana-menu">Servicios</a>
-                        <a href="./contacto.html" class="header__ventana-menu">Contacto</a>
+                        <a href="./servicios.html" class="header__ventana-menu">Servicios</a>
+                        <a href="./contact.html" class="header__ventana-menu">Contacto</a>
                     </div>
 
                 </div>
@@ -39,9 +39,9 @@ function headerContent(el) {
         </header>`;
 
 
-    const botonAbreVentanaEl = document.querySelector(".header__burger");
-    const botonCerrarVentanaEl = document.querySelector(".ventana__cerrar")
-    const ventanaEl = document.querySelector(".ventana")
+    const botonAbreVentanaEl = headerEl.querySelector(".header__burger");
+    const botonCerrarVentanaEl = headerEl.querySelector(".ventana__cerrar")
+    const ventanaEl = headerEl.querySelector(".ventana")
 
     botonAbreVentanaEl.addEventListener("click", () => {
         ventanaEl.style.display = "inherit"

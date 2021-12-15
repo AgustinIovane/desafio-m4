@@ -6,7 +6,7 @@ function footerContent(el) {
     <footer class="footer">
 
         <div class="footer__logo-img">
-            <img class="footer__logo" src="character.jpg">
+            <a href="./index.html"><img src="./img/character.jpg" alt="" class="footer__logo" /></a>
         </div>
 
         <nav class="footer__social-link">
@@ -14,19 +14,19 @@ function footerContent(el) {
             <div class="footer__icons">
 
                 <a href="https://www.instagram.com/?hl=es" target="blank" class="footer__social-link">Instagram
-                    <img src="instagram.png" class="footer__network">
+                    <img src="./img/instagram.png" class="footer__network">
                 </a>
             </div>
 
             <div class="footer__icons">
                 <a href="https://ar.linkedin.com/" target="blank" class="footer__social-link">Linkedin
-                    <img src="linkedin.png" class="footer__network">
+                    <img src="./img/linkedin.png" class="footer__network">
                 </a>
             </div>
 
             <div class="footer__icons">
                 <a href="https://github.com/" target="blank" class="footer__social-link">Github
-                    <img src="github.png" class="footer__network">
+                    <img src="./img/github.png" class="footer__network">
                 </a>
             </div>
 

@@ -1,3 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
+    padding: 0;
+    
+}
+.back{
+    background: linear-gradient(107.17deg, #408195 29.35%, rgba(0, 210, 135, 0.8) 78.73%);
+
 }

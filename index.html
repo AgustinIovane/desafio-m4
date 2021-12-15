@@ -16,17 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Poppins&family=Roboto&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./header/index.css" />
+
     <script defer src="./header/index.js"></script>
-
-    <link rel="stylesheet" href="./footer/index.css" />
-    <script defer src="./footer/index.js"></script>
-
-    <link rel="stylesheet" href="./contacto/index.css">
     <script defer src="./contacto/index.js"></script>
-
-    <link rel="stylesheet" href="./index.css">
+    <script defer src="./footer/index.js"></script>
     <script defer src="/index.js"></script>
+
+    <link rel="stylesheet" href="./header/index.css" />
+    <link rel="stylesheet" href="./contacto/index.css">
+    <link rel="stylesheet" href="./footer/index.css" />
+    <link rel="stylesheet" href="./index.css">
+
 
 
 
@@ -35,17 +35,18 @@
 <body>
 
     <div class="contenedor-main">
-
-        <div class="header-content"></div>
-
         <div class="main">
-            <div class="main__titulo">
-                <h1 class="hola">Hola a todos</h1>
-                <h2 class="agus">Soy Agustín</h2>
-            </div>
+            <div class="header-content"></div>
+            <div class="template-content"></div>
         </div>
-
     </div>
+
+    <template id="main">
+        <div class="main__titulo">
+            <h1 class="hola">Hola a todos</h1>
+            <h2 class="agus">Soy Agustín</h2>
+        </div>
+    </template>
 
 
     <section class="about-me">
@@ -67,54 +68,39 @@
 
         </div>
 
+
+
         <div class="abour-me__img">
-            <img class="img" src="character.jpg">
-        </div>
-
-    </section>
-
-    <section class="seccion-uno">
-
-        <h1 class="servicios">GLORIUS</h1>
-
-        <div class="compu1">
-            <div><img class="pantalla" src="pc.jpg"></div>
-            <h2 class="cosas1">PC GAMER</h2>
-            <p class="lorem2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat corporis incidunt
-                numquam
-                culpa debitis fugit ab repudiandae dolorum temporibus fugiat, voluptatem qui assumenda sunt maiores
-                sapiente
-                enim necessitatibus sed unde?</p>
-        </div>
-
-        <div class="compu2">
-            <div><img class="pantalla" src="pc.jpg"></div>
-            <h2 class="cosas1">MASTER</h2>
-            <p class="lorem2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat corporis incidunt
-                numquam
-                culpa debitis fugit ab repudiandae dolorum temporibus fugiat, voluptatem qui assumenda sunt maiores
-                sapiente
-                enim necessitatibus sed unde?</p>
-        </div>
-
-        <div class="compu3">
-            <div><img class="pantalla" src="pc.jpg"></div>
-            <h2 class="cosas1">RACE</h2>
-            <p class="lorem2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat corporis incidunt
-                numquam
-                culpa debitis fugit ab repudiandae dolorum temporibus fugiat, voluptatem qui assumenda sunt maiores
-                sapiente
-                enim necessitatibus sed unde?</p>
+            <img class="img" src="./img/character.jpg">
         </div>
 
     </section>
 
 
+    <section class="servicios">
+        <h2 class="servicios__title">Servicios</h2>
+        <p class="servicios__descripcion">Mis servicios en el armado de PC</p>
+        <div class="servicios__content">
+        </div>
+    </section>
+
+    <template id="sevicios__card-template">
+        <div class="servicios__card">
+            <img src="./img/pc.jpg" alt="" class="servicios__image">
+            <div class="servicios__card-content">
+                <h4 class="servicios__card-title">Un trabajo que hice</h4>
+                <p class="servicios__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                    maiores maxime, eligendi quos, laudantium in sequi quod magni nemo laboriosam, amet sint
+                    praesentium alias. Officia ab explicabo soluta facere sit?</p>
+                <a href="https://apx.scholl" class="servicios__card-link">Ver mas</a>
+            </div>
+        </div>
+    </template>
 
     <div class="form-container"></div>
 
-    <div class="footer-content"></div>
 
+    <div class="footer-content"></div>
 
 </body>
 

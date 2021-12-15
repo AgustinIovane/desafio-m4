@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.portfolio-content {
+    width: 100%;
+    background-color: black;
+  }
+  @media (min-width: 769px) {
+    .portfolio-content {
+      background-image: url("./img/portfolio.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  
+  .portfolio__title-container {
+    width: 100%;
+    text-align: center;
+  }
+  @media (min-width: 769px) {
+    .portfolio__title-container {
+      width: 100%;
+      text-align: center;
+      background-color: transparent;
+      height: 554px;
+      text-align: left;
+    }
+  }
+  
+  .portfolio__title {
+    font-family: "Montserrat";
+    font-size: 48px;
+    color: #ffffff;
+  }
+  @media (min-width: 769px) {
+    .portfolio__title {
+      font-family: "Montserrat";
+      font-size: 48px;
+      color: white;
+      padding: 120px;
+    }
+  }
+
+
+  
+  .servicios{
+    height: 1800px;
+    width: 100%;
+  }
+  
+  @media (min-width: 769px){
+    .servicios{
+    height: 1200px;}
+  }
+  
+  @media (min-width: 960px){
+    .servicios{
+    height: 800px;}
+  }
+  
+  .servicios__title{
+  font-size: 38px;
+  margin: 0;
+  margin: 40px 0 0 0;
+  text-align: center;
+  }
+  
+  .servicios__descripcion{
+    font-size: 24px;
+    margin: 7px 0 0 0;
+    text-align: center;
+  }
+  
+  .servicios__content{
+  margin-top: 20px;
+  padding: 40px;
+  display: grid;
+  gap: 40px;
+  }
+  
+  @media (min-width: 769px) {
+    .servicios__content{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .servicios__content{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .servicios__card{
+     border: solid 2px black;
+     border-radius: 4px; 
+  }
+  .servicios__image{
+     object-fit: cover;
+     height: 255px;
+     width: 100%;
+  }
+  .servicios__card-content{
+     padding: 20px;
+  }
+  .servicios__card-title{
+     font-size: 30px;
+     margin: 0;
+  }
+  .servicios__card-text{
+    margin: 0;
+    font-size: 18px;
+  }
+  .servicios__card-link{
+    text-decoration: none;
+    font-size: 18px;
+    text-align: right;
+    display: block;
+    color: firebrick;
+    margin-top: 20px;
+  }
