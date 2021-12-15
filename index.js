@@ -1,3 +1,35 @@
+function addMe(params) {
+    const template = document.querySelector("#presentacion");
+    const container = document.querySelector(".presentacion-template");
+
+    template.content.querySelector(".about-me__title").textContent = params.holas
+    template.content.querySelector(".about-me__text").textContent = params.agustin
+
+    var clone = document.importNode(template.content, true);
+    container.appendChild(clone);
+
+}
+
+function getMe() {
+    return fetch("https://cdn.contentful.com/spaces/cygex8it45gz/environments/master/entries?access_token=oKC6-8KB00PLdDPOSHWfwrkGpbUf5igidMgRECBLcKg&content_type=presentacion"
+    )
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            console.log(data)
+            const fieldsCollections = data.items.map((item) => {
+
+                return {
+                    holas: item.fields.soyAgus,
+                    agustin: item.fields.presentacion,
+                };
+            });
+
+            return fieldsCollections;
+        });
+}
+
 function addWelcome(params) {
     const template = document.querySelector("#main");
     const container = document.querySelector(".template-content");
@@ -91,6 +123,12 @@ function main() {
     getWelcome().then(function (works) {
         for (const w of works) {
             addWelcome(w);
+        }
+    })
+
+    getMe().then(function (works) {
+        for (const w of works) {
+            addMe(w);
         }
     })
 

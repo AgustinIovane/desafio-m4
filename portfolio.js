@@ -1,32 +1,46 @@
-function addWorkCard(params = {}) {
-    const template = document.querySelector("#sevicios__card-template");
-    const container = document.querySelector(".servicios__content");
+function addPort(params = {}) {
 
-    template.content.querySelector(".servicios__card-title").textContent = params.title;
+    const template = document.querySelector("#port__card-template");
+    const container = document.querySelector(".port__content");
 
-    template.content.querySelector(".servicios__card-text").textContent = params.description;
+    template.content.querySelector(".port__card-title").textContent = params.title;
 
-    template.content.querySelector(".servicios__image").src = params.image;
+    template.content.querySelector(".port__card-text").textContent = params.description;
 
-    template.content.querySelector(".servicios__card-link").href = params.url;
+    template.content.querySelector(".port__image").src = "http:" + params.image;
+
+    template.content.querySelector(".port__card-link").href = params.url;
 
     var clone = document.importNode(template.content, true);
     container.appendChild(clone);
 }
 
+function searchImagen(id, datos) {
+    const imagen = datos.includes.Asset.find((asset) => {
+        return asset.sys.id == id;
+    });
+    return imagen;
+}
 
-function getWorks() {
-    return fetch("https://cdn.contentful.com/spaces/cygex8it45gz/environments/master/entries?access_token=oKC6-8KB00PLdDPOSHWfwrkGpbUf5igidMgRECBLcKg&content_type=services"
+
+function getPort() {
+    return fetch("https://cdn.contentful.com/spaces/cygex8it45gz/environments/master/entries?access_token=oKC6-8KB00PLdDPOSHWfwrkGpbUf5igidMgRECBLcKg&content_type=portfolio"
     )
         .then((res) => {
             return res.json();
         })
         .then((data) => {
+            //console.log(data)
             const fieldsCollections = data.items.map((item) => {
+                const imgId = item.fields.imagen.sys.id
+                const imagen = searchImagen(imgId, data);
+                const linkImg = imagen.fields.file.url;
+                //console.log(linkImg);
                 return {
                     title: item.fields.titulo,
                     description: item.fields.descripcion,
                     url: item.fields.url,
+                    image: linkImg,
                 };
             });
 
@@ -36,13 +50,14 @@ function getWorks() {
 
 
 
+
 function main() {
     const headerEl = document.querySelector(".header-content");
     headerContent(headerEl);
 
-    getWorks().then(function (works) {
+    getPort().then(function (works) {
         for (const w of works) {
-            addWorkCard(w);
+            addPort(w);
         }
     })
 

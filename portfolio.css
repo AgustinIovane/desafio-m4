@@ -50,35 +50,35 @@ body{
 
 
   
-  .servicios{
+  .port{
     height: 1800px;
     width: 100%;
   }
   
   @media (min-width: 769px){
-    .servicios{
+    .port{
     height: 1200px;}
   }
   
   @media (min-width: 960px){
-    .servicios{
+    .port{
     height: 800px;}
   }
   
-  .servicios__title{
+  .port__title{
   font-size: 38px;
   margin: 0;
   margin: 40px 0 0 0;
   text-align: center;
   }
   
-  .servicios__descripcion{
+  .port__descripcion{
     font-size: 24px;
     margin: 7px 0 0 0;
     text-align: center;
   }
   
-  .servicios__content{
+  .port__content{
   margin-top: 20px;
   padding: 40px;
   display: grid;
@@ -86,38 +86,38 @@ body{
   }
   
   @media (min-width: 769px) {
-    .servicios__content{
+    .port__content{
       grid-template-columns: 1fr 1fr;
     }
   }
   
   @media (min-width: 960px) {
-    .servicios__content{
+    .port__content{
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
   
-  .servicios__card{
+  .port__card{
      border: solid 2px black;
      border-radius: 4px; 
   }
-  .servicios__image{
+  .port__image{
      object-fit: cover;
      height: 255px;
      width: 100%;
   }
-  .servicios__card-content{
+  .port__card-content{
      padding: 20px;
   }
-  .servicios__card-title{
+  .port__card-title{
      font-size: 30px;
      margin: 0;
   }
-  .servicios__card-text{
+  .port__card-text{
     margin: 0;
     font-size: 18px;
   }
-  .servicios__card-link{
+  .port__card-link{
     text-decoration: none;
     font-size: 18px;
     text-align: right;
