@@ -10,15 +10,15 @@ function contactComponent(el) {
         <form class="form">
         <div class="fieldset">
             <label class="label" for="name">NOMBRE</label>
-            <input class="input-text" id="name" type="text">
+            <input class="input-text" name="name">
         </div>
         <div class="fieldset">
             <label class="label" for="email">EMAIL</label>
-            <input class="input-text" id="email" type="email">
+            <input class="input-text" id="email" name="email">
         </div>
         <div class="fieldset">
             <label class="label" for="massage">Mensaje</label>
-            <textarea class="textarea" id="message"></textarea>
+            <textarea class="textarea" name="message"></textarea>
         </div>
         <div class="button-seccion">
             <button class="button">Enviar</button>
